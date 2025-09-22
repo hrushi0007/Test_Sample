@@ -1,11 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+
 const app = express();
 
 app.use(cors());
 
-// Serve Frontend.html as static file at root
+// Serve Frontend.html
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'Frontend.html'));
 });
