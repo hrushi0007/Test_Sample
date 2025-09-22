@@ -7,7 +7,7 @@
   <h1 id="msg">Hi Satvivek...</h1>
 
   <script>
-    fetch('http://localhost:3000/api/message')
+    fetch('/api/message')
       .then(res => res.json())
       .then(data => {
         document.getElementById('msg').textContent = data.message;
