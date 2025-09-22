@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frontend + Backend Example</title>
+</head>
+<body>
+  <h1 id="msg">Nirmal velu Mudhra...</h1>
+
+  <script>
+    fetch('http://localhost:3000/api/message')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('msg').textContent = data.message;
+      })
+      .catch(err => {
+        document.getElementById('msg').textContent = 'Error fetching message';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
